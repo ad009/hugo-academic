@@ -745,6 +745,14 @@ article {
   font-weight: bold;
 }
 
+p.award{
+  font-weight: bold;
+  display: inline;
+  color: red;
+}
+
+
+
 .pub-list-item .pub-abstract {
   font-size: 1rem;
 }

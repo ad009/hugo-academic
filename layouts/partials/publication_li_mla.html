@@ -1,9 +1,12 @@
 <li>
 <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
   {{ if .Params.url_pdf }}
-  <div itemprop="name"><a href="{{ .Params.url_pdf }}"><b>{{ .Title }}</b></a></div>
+  <div itemprop="name"><a href="{{ .Params.url_pdf }}", target="_blank"><b>{{ .Title }}</b></a></div>
   {{ else }}
     <div itemprop="name">{{ .Title }}</div>
+  {{ end }}
+  {{ if .Params.award }}
+    <p class="award">{{ .Params.award | markdownify }}</p>
   {{ end }}
   <div itemprop="author">
     {{ with .Params.authors }}
@@ -16,5 +19,6 @@
     {{- .Params.publication | markdownify -}}
   {{ end }},&nbsp;
   {{- .Date.Format "2006" -}}
+
   <p>{{ partial "publication_links" (dict "content" . "is_list" 1) }}</p>
 </div>
