@@ -489,11 +489,29 @@ ul.ul-edu li .description p {
 }
 
 ul.ul-edu li .description p.course {
-  font-size: 0.9rem;
+  font-size: 1.02rem;
 }
 
 ul.ul-edu li .description p.institution {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  color: rgba(0,0,0,0.6);
+}
+
+ul.ul-employment li {
+  position: relative;
+  padding: 0px 15px 4px 3px;
+}
+
+ul.ul-employment li .description p {
+  margin: 0;
+}
+
+ul.ul-employment li .description p.course {
+  font-size: 1.1rem;
+}
+
+ul.ul-employment li .description p.institution {
+  font-size: 0.9rem;
   color: rgba(0,0,0,0.6);
 }
 
@@ -721,6 +739,10 @@ article {
 
 .pub-list-item {
   margin-bottom: 40px;
+}
+
+.pub-list-item .name{
+  font-weight: bold;
 }
 
 .pub-list-item .pub-abstract {
@@ -1463,6 +1485,10 @@ body.dark {
 }
 
 .dark ul.ul-edu li .description p.institution {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dark ul.ul-employment li .description p.institution {
   color: rgba(255, 255, 255, 0.6);
 }
 

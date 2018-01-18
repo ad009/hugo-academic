@@ -66,6 +66,9 @@
 - id: education
   translation: Education
 
+- id: employment
+  translation: Employment
+
 # Publications widget
 
 - id: more_publications

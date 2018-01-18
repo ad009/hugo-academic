@@ -53,7 +53,7 @@
   </div>
   <div class="col-xs-12 col-md-8" itemprop="description">
 
-    {{ $page.Content }}
+    {{ $page.Content | markdownify }}
 
     <div class="row">
 
@@ -76,7 +76,8 @@
           <li>
             <i class="fa-li fa fa-graduation-cap"></i>
             <div class="description">
-              <p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p>
+              <!-- <p class="course">{{ .course | markdownify }}{{ with .enddate }}, {{ . | markdownify }}{{ end }}</p> -->
+              <p class="course">{{ .course | markdownify }}, {{ .enddate | markdownify }}</p>
               <p class="institution">{{ .institution }}</p>
             </div>
           </li>
@@ -87,4 +88,29 @@
 
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+    </div>
+    {{ with $page.Params.employment }}
+    <div class="col-sm-8">
+      <h3>{{ i18n "employment" | markdownify }}</h3>
+      <ul class="ul-employment">
+        {{ range .employment }}
+        <li>
+            <div class="description">
+              <p class="course">{{ .organisation | markdownify }}</p>
+              <p class="institution">{{ .role  | markdownify }}</p>
+              <p class="institution">{{ .startdate  | markdownify }} - {{ .enddate  | markdownify }}</p>
+            </div>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+  </div>
+</div>
+
+
 </div>
