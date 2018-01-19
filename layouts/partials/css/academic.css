@@ -515,6 +515,37 @@ ul.ul-employment li .description p.institution {
   color: rgba(0,0,0,0.6);
 }
 
+.logoimg{
+  width: 200px;
+  padding-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.logoorg {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.6);
+    text-align: center;
+}
+.logoloc {
+    font-size: 0.8rem;
+    color: rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+.logodur {
+    font-size: 0.8rem;
+    color: rgba(0,0,0,0.6);
+    text-align: center;
+    font-style: italic;
+}
+
+.logorole {
+    color: rgba(0,0,0,0.6);
+    font-size: 0.9rem;
+    text-align: center;
+}
 /*************************************************
  *  Sharing
  **************************************************/

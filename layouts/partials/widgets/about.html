@@ -87,11 +87,8 @@
       {{ end }}
 
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-sm-4">
-    </div>
+
     {{ with $page.Params.employment }}
     <div class="col-sm-8">
       <h3>{{ i18n "employment" | markdownify }}</h3>
@@ -108,8 +105,30 @@
       </ul>
     </div>
     {{ end }}
+  <!-- </div> -->
 
-  </div>
+
+    {{ with $page.Params.appointment }}
+    <h3>{{ i18n "appointments" | markdownify }}</h3>
+    <div class="row">
+      {{ range .appointment }}
+      <div class="col-md-4">
+          <div class="logoorg">{{ .organization | markdownify }}</div>
+          <div class="logoloc">{{ .location  | markdownify }}</div>
+          <a href= {{.url}} target="_blank">
+          <div class="logoimg"><img src={{.logosrc}}></div>
+          </a>
+          <div class="logorole">{{ .role  | markdownify }}<br /></div>
+          <div class="logodur">{{ .duration  | markdownify }}</div>
+      </div>
+      {{ end }}
+
+    </div>
+    {{ end }}
+
+</div>
+
+
 </div>
 
 

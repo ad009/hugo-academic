@@ -12,7 +12,7 @@
   </div>
   {{ else }}
   <div class="col-md-12">
-    {{ $page.Content }}
+    {{ $page.Content | markdownify }}
   </div>
   {{ end }}
 </div>
